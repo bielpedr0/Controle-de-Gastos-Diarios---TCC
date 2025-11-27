@@ -1,0 +1,5 @@
+*.js linguist-detectable=true
+/gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+README.md linguist-vendored

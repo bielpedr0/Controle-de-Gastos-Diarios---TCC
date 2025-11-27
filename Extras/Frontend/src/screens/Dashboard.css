@@ -1,0 +1,76 @@
+/* Paleta base (altere --color-primary se quiser outra cor) */
+:root {
+  --color-primary: #00796b;      /* verde do sistema */
+  --text-color: #333;
+  --nav-bg: #ffffff;
+  --nav-border: #e5e7eb;
+}
+
+/* Barra de navegação das abas */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--nav-bg);
+  padding: 8px 16px 0;
+  border-bottom: 1px solid var(--nav-border);
+  overflow-x: auto;        /* rolagem horizontal se tiver muitas abas */
+  scrollbar-width: none;   /* Firefox: esconde a barra */
+}
+.nav::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+/* Botão de aba: estilo “underline” moderno */
+.tabButton {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  font: 600 1rem/1 'Poppins', sans-serif;
+  padding: 0.9rem 1.1rem;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.08s ease;
+}
+
+/* Hover e foco acessíveis */
+.tabButton:hover {
+  color: var(--color-primary);
+  border-bottom-color: rgba(0, 121, 107, 0.35);
+}
+.tabButton:focus-visible {
+  outline: none;
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  box-shadow: 0 2px 0 rgba(0, 121, 107, 0.25);
+}
+
+/* Aba ativa */
+.tabButtonActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* Estado desabilitado */
+.tabButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Conteúdo das abas */
+.content {
+  padding: 0 2rem 2rem 2rem;
+  width: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .tabButton {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.95rem;
+  }
+  .content {
+    padding: 0.75rem 1rem 1.25rem;
+  }
+}

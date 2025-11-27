@@ -1,0 +1,44 @@
+/* Reset e estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #EBF0F5 ; /* cinza claro elegante */
+  color: #333;
+  line-height: 1.6;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #222;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Links */
+a {
+  color: #00796b; /* verde elegante */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #004d40;
+  text-decoration: underline;
+}
